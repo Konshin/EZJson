@@ -8,12 +8,6 @@
 
 import Foundation
 
-public protocol JSONDecodable {
-    associatedtype DecodeType = Self
-    
-    static func decode(json: JSON) throws -> DecodeType
-}
-
 public enum JSON {
     case Object([Swift.String: JSON])
     case Array([JSON])
@@ -23,7 +17,7 @@ public enum JSON {
     case Date(NSDate)
     case Null
     
-    init(_ json: AnyObject) {
+    public init(_ json: AnyObject) {
         switch json {
             
         case let v as [AnyObject]:
@@ -72,7 +66,7 @@ public enum JSON {
         case .Date(let date as T):
             resultValue = try block(date)
         default:
-            throw JSONError.TypeMismatch
+            throw JSONError.TypeMismatch(expected: "Any Value", actual: description)
         }
         return JSON(resultValue)
     }
@@ -102,7 +96,7 @@ public enum JSON {
     
     public func decode<T: JSONDecodable>() throws -> [T] {
         guard case .Array(let jsons) = self else {
-            throw JSONError.TypeMismatch
+            throw JSONError.TypeMismatch(expected: "Array", actual: description)
         }
         return try jsons.map() { try $0.decode() }
     }
@@ -115,6 +109,21 @@ public enum JSON {
             return try jsons.map() { try $0.decode() }
         } catch {
             return nil
+        }
+    }
+}
+
+
+extension JSON: CustomStringConvertible {
+    public var description: Swift.String {
+        switch self {
+        case let .String(v): return "String(\(v))"
+        case let .Number(v): return "Number(\(v))"
+        case let .Bool(v): return "Bool(\(v))"
+        case let .Array(a): return "Array(\(a.description))"
+        case let .Object(o): return "Object(\(o.description))"
+        case let .Date(d): return "Date(\(d.description))"
+        case .Null: return "Null"
         }
     }
 }

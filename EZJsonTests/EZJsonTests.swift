@@ -8,6 +8,9 @@
 
 import XCTest
 @testable import EZJson
+import EZJson
+
+extension String: ErrorType {}
 
 private let json: [[String: AnyObject]] =
     [

@@ -8,6 +8,15 @@
 
 import Foundation
 
-enum JSONError: ErrorType {
-    case TypeMismatch
+public enum JSONError: ErrorType {
+    case TypeMismatch(expected: String, actual: String)
+}
+
+
+extension JSONError: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case let .TypeMismatch(expected, actual): return "Type Mismatch: Expected \(expected), got \(actual))"
+        }
+    }
 }
