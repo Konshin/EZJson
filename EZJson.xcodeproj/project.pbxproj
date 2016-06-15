@@ -12,6 +12,7 @@
 		D54E0CA11D1168DB00081292 /* EZJsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E0CA01D1168DB00081292 /* EZJsonTests.swift */; };
 		D54E0CAE1D11696400081292 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E0CAD1D11696400081292 /* JSON.swift */; };
 		D54E0CB01D1169A500081292 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E0CAF1D1169A500081292 /* Extensions.swift */; };
+		D54E0CB21D1182B500081292 /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E0CB11D1182B500081292 /* JSONError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		D54E0CA21D1168DB00081292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D54E0CAD1D11696400081292 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		D54E0CAF1D1169A500081292 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D54E0CB11D1182B500081292 /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D54E0CAD1D11696400081292 /* JSON.swift */,
+				D54E0CB11D1182B500081292 /* JSONError.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54E0CB21D1182B500081292 /* JSONError.swift in Sources */,
 				D54E0CAE1D11696400081292 /* JSON.swift in Sources */,
 				D54E0CB01D1169A500081292 /* Extensions.swift in Sources */,
 			);

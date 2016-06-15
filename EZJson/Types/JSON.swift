@@ -72,7 +72,7 @@ public enum JSON {
         case .Date(let date as T):
             resultValue = try block(date)
         default:
-            throw "Ошибка"
+            throw JSONError.TypeMismatch
         }
         return JSON(resultValue)
     }
@@ -102,7 +102,7 @@ public enum JSON {
     
     public func decode<T: JSONDecodable>() throws -> [T] {
         guard case .Array(let jsons) = self else {
-            throw "нечего декодить"
+            throw JSONError.TypeMismatch
         }
         return try jsons.map() { try $0.decode() }
     }
