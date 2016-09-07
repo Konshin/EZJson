@@ -1,0 +1,116 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "JSONDecodable"
+provides-nominal:
+- "P6EZJson13JSONDecodable"
+provides-member:
+- ["P6EZJson13JSONDecodable", ""]
+- ["P6EZJson13JSONDecodable", "init"]
+- ["P6EZJson13JSONDecodable", "init"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "StringLiteralType"
+- "JSONDecodable"
+- "NSNumber"
+- "NSDate"
+- "JSON"
+- !private "JSONError"
+- !private "Double"
+depends-member:
+- !private ["Ps9AnyObject", "JSONError"]
+- !private ["Ps9AnyObject", "timeIntervalSince1970"]
+- !private ["Ps25BooleanLiteralConvertible", "JSONError"]
+- !private ["Ps11CVarArgType", "JSONError"]
+- !private ["Ps11CVarArgType", "timeIntervalSince1970"]
+- !private ["Ps28CustomDebugStringConvertible", "JSONError"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSince1970"]
+- ["Ps23CustomStringConvertible", "Date"]
+- !private ["Ps23CustomStringConvertible", "JSONError"]
+- ["Ps23CustomStringConvertible", "Number"]
+- !private ["Ps23CustomStringConvertible", "TypeMismatch"]
+- !private ["Ps23CustomStringConvertible", "description"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSince1970"]
+- !private ["Ps9Equatable", "JSONError"]
+- !private ["Ps9Equatable", "timeIntervalSince1970"]
+- !private ["Ps9ErrorType", "TypeMismatch"]
+- !private ["Ps23FloatLiteralConvertible", "JSONError"]
+- !private ["Ps8Hashable", "JSONError"]
+- !private ["Ps8Hashable", "timeIntervalSince1970"]
+- !private ["Ps25IntegerLiteralConvertible", "JSONError"]
+- ["O6EZJson4JSON", "Date"]
+- ["O6EZJson4JSON", "Number"]
+- !private ["O6EZJson4JSON", "deinit"]
+- !private ["O6EZJson4JSON", "description"]
+- !private ["P6EZJson13JSONDecodable", "Double"]
+- ["P6EZJson13JSONDecodable", "JSON"]
+- !private ["P6EZJson13JSONDecodable", "JSONError"]
+- ["P6EZJson13JSONDecodable", "NSDate"]
+- ["P6EZJson13JSONDecodable", "NSNumber"]
+- ["P6EZJson13JSONDecodable", "init"]
+- !private ["P6EZJson13JSONDecodable", "timeIntervalSince1970"]
+- !private ["O6EZJson9JSONError", "TypeMismatch"]
+- !private ["O6EZJson9JSONError", "deinit"]
+- !private ["PSo8NSCoding", "JSONError"]
+- !private ["PSo8NSCoding", "timeIntervalSince1970"]
+- !private ["PSo9NSCopying", "JSONError"]
+- !private ["PSo9NSCopying", "timeIntervalSince1970"]
+- ["CSo6NSDate", "JSON"]
+- !private ["CSo6NSDate", "JSONError"]
+- !private ["CSo6NSDate", "init"]
+- !private ["CSo6NSDate", "timeIntervalSince1970"]
+- !private ["CSo8NSNumber", "Double"]
+- ["CSo8NSNumber", "JSON"]
+- !private ["CSo8NSNumber", "JSONError"]
+- !private ["CSo8NSNumber", "deinit"]
+- !private ["CSo8NSNumber", "init"]
+- !private ["CSo8NSObject", "Double"]
+- ["CSo8NSObject", "JSON"]
+- !private ["CSo8NSObject", "JSONError"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "timeIntervalSince1970"]
+- !private ["PSo16NSObjectProtocol", "JSONError"]
+- !private ["PSo16NSObjectProtocol", "timeIntervalSince1970"]
+- !private ["PSo14NSSecureCoding", "JSONError"]
+- !private ["PSo14NSSecureCoding", "timeIntervalSince1970"]
+- !private ["CSo7NSValue", "Double"]
+- ["CSo7NSValue", "JSON"]
+- !private ["CSo7NSValue", "JSONError"]
+- !private ["CSo7NSValue", "init"]
+- !private ["Ps12_Reflectable", "JSONError"]
+- !private ["Ps12_Reflectable", "timeIntervalSince1970"]
+depends-nominal:
+- !private "Ps9AnyObject"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11CVarArgType"
+- !private "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps9ErrorType"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps8Hashable"
+- !private "Ps25IntegerLiteralConvertible"
+- "O6EZJson4JSON"
+- "P6EZJson13JSONDecodable"
+- !private "O6EZJson9JSONError"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo6NSDate"
+- "CSo8NSNumber"
+- "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "CSo7NSValue"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/konshin/Documents/dev/my/EZJson/EZJson/EZJson.h"
+- "/Users/konshin/Documents/dev/my/EZJson/build/EZJson.build/Debug-iphonesimulator/EZJson.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "df194dc1ce11923d3d3e4aa54e3df9c8"

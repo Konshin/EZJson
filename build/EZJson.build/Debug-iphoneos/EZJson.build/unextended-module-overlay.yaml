@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/konshin/Library/Developer/Xcode/DerivedData/EZJson-dkslgouubbyjcvecjxxpouxyvbjw/Build/Products/Debug-iphoneos/EZJson.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/konshin/Documents/dev/my/EZJson/build/EZJson.build/Debug-iphoneos/EZJson.build/unextended-module.modulemap',
+    }]
+  }]
+}

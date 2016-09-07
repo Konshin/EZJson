@@ -27,6 +27,6 @@ class EZJsonArrayTests: XCTestCase {
             return
         }
         
-        print(jsons)
+        print(jsons)json
     }
 }

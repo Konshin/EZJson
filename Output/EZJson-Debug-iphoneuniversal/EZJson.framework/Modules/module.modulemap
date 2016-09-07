@@ -1,0 +1,10 @@
+framework module EZJson {
+  umbrella header "EZJson.h"
+
+  export *
+  module * { export * }
+}
+
+module EZJson.Swift {
+    header "EZJson-Swift.h"
+}
