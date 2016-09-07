@@ -9,61 +9,61 @@
 import Foundation
 
 extension Int: JSONDecodable {
-    public static func decode(json: JSON) throws -> Int {
+    public init(json: JSON) throws {
         guard case let .Number(num as Int) = json else {
             throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
         }
-        return num
+        self = num
     }
 }
 
 
 extension Float: JSONDecodable {
-    public static func decode(json: JSON) throws -> Float {
+    public init(json: JSON) throws {
         guard case let .Number(num as Float) = json else {
             throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
         }
-        return num
+        self = num
     }
 }
 
 
 extension Double: JSONDecodable {
-    public static func decode(json: JSON) throws -> Double {
+    public init(json: JSON) throws {
         guard case let .Number(num as Double) = json else {
             throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
         }
-        return num
+        self = num
     }
 }
 
 
 extension NSNumber: JSONDecodable {
-    public static func decode(json: JSON) throws -> NSNumber {
-        guard case let .Number(num) = json else {
-            throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
-        }
-        return num
-    }
+//    public convenience required init(json: JSON) throws {
+//        guard case let .Number(num as Double) = json else {
+//            throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
+//        }
+//        self.init(double: num)
+//    }
 }
 
 
 extension Bool: JSONDecodable {
-    public static func decode(json: JSON) throws -> Bool {
+    public init(json: JSON) throws {
         guard case let .Bool(bool) = json else {
             throw JSONError.TypeMismatch(expected: "Bool", actual: json.description)
         }
-        return bool
+        self = bool
     }
 }
 
 
 extension String: JSONDecodable {
-    public static func decode(json: JSON) throws -> String {
+    public init(json: JSON) throws {
         guard case let .String(value) = json else {
             throw JSONError.TypeMismatch(expected: "String", actual: json.description)
         }
-        return value
+        self = value
     }
 }
 

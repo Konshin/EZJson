@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum JSON {
     case Object([Swift.String: JSON])
@@ -16,6 +17,10 @@ public enum JSON {
     case Bool(Swift.Bool)
     case Date(NSDate)
     case Null
+    
+    public init(_ jsons: [[Swift.String: AnyObject]]) {
+        self = .Array(jsons.map({ JSON($0) }))
+    }
     
     public init(_ json: AnyObject) {
         switch json {
@@ -80,15 +85,22 @@ public enum JSON {
         return value
     }
     
+    public subscript(index: Swift.Int) -> JSON {
+        guard case .Array(let jsons) = self where jsons.count > index else {
+            return .Null
+        }
+        return jsons[index]
+    }
+    
     //MARK: - decode
     
     public func decode<T: JSONDecodable>() throws -> T {
-        return try T.decode(self) as! T
+        return try T(json: self)
     }
     
     public func decode<T: JSONDecodable>() -> T? {
         do {
-            return try T.decode(self) as? T
+            return try T(json: self)
         } catch {
             return nil
         }
