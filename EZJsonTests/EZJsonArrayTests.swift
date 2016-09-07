@@ -10,17 +10,23 @@ import XCTest
 @testable import EZJson
 
 class EZJsonArrayTests: XCTestCase {
-    private let jsonArray = [
-        [1, 2],
-        [3, 4],
-        [5, 6]
+    private let json = [
+        "id": 5,
+        "name": "Snake1",
+        "body": [
+            [1, 2],
+            [3, 4],
+            [5, 6]
+        ]
     ]
     
     func testParse() {
-        let json = JSON(jsonArray)
-        guard case .Array(let jsons) = json else {
+        let jsonObject = JSON(json)
+        guard case .Array(let jsons) = jsonObject["body"] else {
             XCTAssert(false)
             return
         }
+        
+        print(jsons)
     }
 }
