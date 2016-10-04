@@ -4,28 +4,28 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/konshin/Library/Developer/Xcode/DerivedData/EZJson-dkslgouubbyjcvecjxxpouxyvbjw/Build/Products/Debug-iphonesimulator/EZJson.framework/Headers",
+      'name': "/Users/konshin/Documents/dev/my/libs/EZJson/build/Release-iphoneos/EZJson.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "EZJson-Swift.h",
-          'external-contents': "/Users/konshin/Library/Developer/Xcode/DerivedData/EZJson-dkslgouubbyjcvecjxxpouxyvbjw/Build/Products/Debug-iphonesimulator/EZJson.framework/Headers/EZJson-Swift.h"
+          'external-contents': "/Users/konshin/Documents/dev/my/libs/EZJson/build/Release-iphoneos/EZJson.framework/Headers/EZJson-Swift.h"
         },
         {
           'type': 'file',
           'name': "EZJson.h",
-          'external-contents': "/Users/konshin/Documents/dev/my/EZJson/EZJson/EZJson.h"
+          'external-contents': "/Users/konshin/Documents/dev/my/libs/EZJson/EZJson/EZJson.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/konshin/Library/Developer/Xcode/DerivedData/EZJson-dkslgouubbyjcvecjxxpouxyvbjw/Build/Products/Debug-iphonesimulator/EZJson.framework/Modules",
+      'name': "/Users/konshin/Documents/dev/my/libs/EZJson/build/Release-iphoneos/EZJson.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/konshin/Documents/dev/my/EZJson/build/EZJson.build/Debug-iphonesimulator/EZJson.build/module.modulemap"
+          'external-contents': "/Users/konshin/Documents/dev/my/libs/EZJson/build/EZJson.build/Release-iphoneos/EZJson.build/module.modulemap"
         }
       ]
     }
