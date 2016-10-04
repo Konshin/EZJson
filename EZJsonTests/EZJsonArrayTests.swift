@@ -18,15 +18,13 @@ class EZJsonArrayTests: XCTestCase {
             [3, 4],
             [5, 6]
         ]
-    ]
+    ] as [String : Any]
     
     func testParse() {
         let jsonObject = JSON(json)
-        guard case .Array(let jsons) = jsonObject["body"] else {
+        guard case .array(_ ) = jsonObject["body"] else {
             XCTAssert(false)
             return
         }
-        
-        print(jsons)json
     }
 }

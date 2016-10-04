@@ -9,16 +9,16 @@
 import XCTest
 @testable import EZJson
 
-extension String: ErrorType {}
+extension String: Error {}
 
-private let json: [[String: AnyObject]] =
+private let json: [[String: Any]] =
     [
         [
-            "id": -1,
-            "name": "Vasya",
+            "id": -1 as AnyObject,
+            "name": "Vasya" as AnyObject,
             "maybeValue": NSNull(),
-            "shouldBeNumber": 6,
-            "date": "03062016",
+            "shouldBeNumber": 6 as AnyObject,
+            "date": "03062016" as AnyObject,
             "object": [
                 "id": 6,
                 "name": "object"
@@ -2330,18 +2330,18 @@ struct Item: JSONDecodable {
     let name: String
     let maybeValue: String?
     let shouldBeNumber: Int
-    let date: NSDate
+    let date: Date
     let object: Object?
     let children: [Item]?
     
-    private static let dateFormatter: NSDateFormatter = {
-        let formatter = NSDateFormatter()
+    private static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
         formatter.dateFormat = "ddMMyyyy"
         return formatter
     }()
     
-    static func dateFromString(str: String) throws -> NSDate {
-        guard let date = dateFormatter.dateFromString(str) else {
+    static func dateFromString(str: String) throws -> Date {
+        guard let date = dateFormatter.date(from: str) else {
             throw "Не получилось распарсить дату"
         }
         
@@ -2353,7 +2353,10 @@ struct Item: JSONDecodable {
         name = try json["name"].decode()
         maybeValue = json["maybeValue"].decode()
         shouldBeNumber = try json["shouldBeNumber"].decode()
-        date = try json["date"].map(Item.dateFromString).decode()
+        
+        let dateJson = try json["date"].map(Item.dateFromString)
+        
+        date = try dateJson.decode()
         object = json["object"].decode()
         children = json["children"].decode()
     }
@@ -2387,13 +2390,13 @@ class EZJsonTests: XCTestCase {
             let items: [Item] = try jsonArray.decode()
             XCTAssertFalse(items.isEmpty)
         } catch {
-            XCTAssert(false, String(error))
+            XCTAssert(false, String(describing: error))
         }
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
@@ -2403,13 +2406,13 @@ class EZJsonTests: XCTestCase {
         let jsonValue = json + json + json
         
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             let jsonArray = JSON(jsonValue)
             do {
                 let items: [Item] = try jsonArray.decode()
                 XCTAssertFalse(items.isEmpty)
             } catch {
-                XCTAssert(false, String(error))
+                XCTAssert(false, String(describing: error))
             }
         }
     }

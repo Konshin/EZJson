@@ -15,19 +15,9 @@ public protocol JSONDecodable {
 
 extension JSONDecodable where Self: NSNumber {
     public init(json: JSON) throws {
-        guard case let .Number(num as Double) = json else {
-            throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
+        guard case let .number(num as Double) = json else {
+            throw JSONError.typeMismatch(expected: "Number", actual: json.description)
         }
-        self.init(double: num)
-    }
-}
-
-
-extension JSONDecodable where Self: NSDate {
-    public init(json: JSON) throws {
-        guard case let .Date(date) = json else {
-            throw JSONError.TypeMismatch(expected: "Number", actual: json.description)
-        }
-        self.init(timeIntervalSince1970: date.timeIntervalSince1970)
+        self.init(value: num as Double)
     }
 }
