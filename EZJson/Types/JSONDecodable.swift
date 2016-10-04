@@ -9,7 +9,15 @@
 import Foundation
 
 public protocol JSONDecodable {
-    associatedtype DecodeType = Self
-    
-    static func decode(json: JSON) throws -> DecodeType
+    init(json: JSON) throws
+}
+
+
+extension JSONDecodable where Self: NSNumber {
+    public init(json: JSON) throws {
+        guard case let .number(num as Double) = json else {
+            throw JSONError.typeMismatch(expected: "Number", actual: json.description)
+        }
+        self.init(value: num as Double)
+    }
 }

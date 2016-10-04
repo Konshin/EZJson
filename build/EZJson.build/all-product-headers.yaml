@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/konshin/Documents/dev/my/libs/EZJson/build/Release-iphoneos/EZJson.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "EZJson-Swift.h",
+          'external-contents': "/Users/konshin/Documents/dev/my/libs/EZJson/build/Release-iphoneos/EZJson.framework/Headers/EZJson-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "EZJson.h",
+          'external-contents': "/Users/konshin/Documents/dev/my/libs/EZJson/EZJson/EZJson.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/konshin/Documents/dev/my/libs/EZJson/build/Release-iphoneos/EZJson.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/konshin/Documents/dev/my/libs/EZJson/build/EZJson.build/Release-iphoneos/EZJson.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

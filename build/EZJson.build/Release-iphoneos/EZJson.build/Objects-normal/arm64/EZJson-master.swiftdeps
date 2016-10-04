@@ -1,0 +1,8 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "8d7ba478e94643c1b84b23d333f760a9"
+build_time: [528912769, 680382000]
+inputs:
+  "/Users/konshin/Documents/dev/my/libs/EZJson/EZJson/Types/JSONError.swift": [9223372036854775807, 0]
+  "/Users/konshin/Documents/dev/my/libs/EZJson/EZJson/Types/JSON.swift": [9223372036854775807, 0]
+  "/Users/konshin/Documents/dev/my/libs/EZJson/EZJson/Extensions/Extensions.swift": [9223372036854775807, 0]
+  "/Users/konshin/Documents/dev/my/libs/EZJson/EZJson/Types/JSONDecodable.swift": [9223372036854775807, 0]

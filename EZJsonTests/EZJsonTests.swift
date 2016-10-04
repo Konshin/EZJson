@@ -8,12 +8,32 @@
 
 import XCTest
 @testable import EZJson
-import EZJson
 
-extension String: ErrorType {}
+extension String: Error {}
 
-private let json: [[String: AnyObject]] =
+private let json: [[String: Any]] =
     [
+        [
+            "id": -1 as AnyObject,
+            "name": "Vasya" as AnyObject,
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6 as AnyObject,
+            "date": "03062016" as AnyObject,
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
         [
             "id": -1,
             "name": "Vasya",
@@ -34,7 +54,2275 @@ private let json: [[String: AnyObject]] =
                     "children": NSNull()
                 ]
             ]
-        ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
+        [
+            "id": -1,
+            "name": "Vasya",
+            "maybeValue": NSNull(),
+            "shouldBeNumber": 6,
+            "date": "03062016",
+            "object": [
+                "id": 6,
+                "name": "object"
+            ],
+            "children": [
+                [
+                    "id": 1,
+                    "name": "Petya",
+                    "maybeValue": "da",
+                    "shouldBeNumber": "3",
+                    "object": NSNull(),
+                    "children": NSNull()
+                ]
+            ]
+        ],
 ]
 
 struct Item: JSONDecodable {
@@ -42,49 +2330,48 @@ struct Item: JSONDecodable {
     let name: String
     let maybeValue: String?
     let shouldBeNumber: Int
-    let date: NSDate
+    let date: Date
     let object: Object?
     let children: [Item]?
     
-    private static let dateFormatter: NSDateFormatter = {
-        let formatter = NSDateFormatter()
+    private static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
         formatter.dateFormat = "ddMMyyyy"
         return formatter
     }()
     
-    static func dateFromString(str: String) throws -> NSDate {
-        guard let date = dateFormatter.dateFromString(str) else {
+    static func dateFromString(str: String) throws -> Date {
+        guard let date = dateFormatter.date(from: str) else {
             throw "Не получилось распарсить дату"
         }
         
         return date
     }
     
-    static func decode(json: JSON) throws -> Item {
-        return Item(
-            id: try json["id"].decode(),
-            name: try json["name"].decode(),
-            maybeValue: json["maybeValue"].decode(),
-            shouldBeNumber: try json["shouldBeNumber"].decode(),
-            date: try json["date"].map(dateFromString).decode(),
-            object: json["object"].decode(),
-            children: json["children"].decode()
-        )
+    init(json: JSON) throws {
+        id = try json["id"].decode()
+        name = try json["name"].decode()
+        maybeValue = json["maybeValue"].decode()
+        shouldBeNumber = try json["shouldBeNumber"].decode()
+        
+        let dateJson = try json["date"].map(Item.dateFromString)
+        
+        date = try dateJson.decode()
+        object = json["object"].decode()
+        children = json["children"].decode()
     }
 }
-
 
 struct Object: JSONDecodable {
     let id: Int
     let name: String
     
-    static func decode(json: JSON) throws -> Object {
-        return Object(
-            id: try json["id"].decode(),
-            name: try json["name"].decode()
-        )
+    init(json: JSON) throws {
+        id = try json["id"].decode()
+        name = try json["name"].decode()
     }
 }
+
 
 class EZJsonTests: XCTestCase {
     override func setUp() {
@@ -103,14 +2390,30 @@ class EZJsonTests: XCTestCase {
             let items: [Item] = try jsonArray.decode()
             XCTAssertFalse(items.isEmpty)
         } catch {
-            XCTAssert(false, String(error))
+            XCTAssert(false, String(describing: error))
         }
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
+        }
+    }
+    
+    
+    func testPerformanceEZJson() {
+        let jsonValue = json + json + json
+        
+        // This is an example of a performance test case.
+        self.measure {
+            let jsonArray = JSON(jsonValue)
+            do {
+                let items: [Item] = try jsonArray.decode()
+                XCTAssertFalse(items.isEmpty)
+            } catch {
+                XCTAssert(false, String(describing: error))
+            }
         }
     }
 }
