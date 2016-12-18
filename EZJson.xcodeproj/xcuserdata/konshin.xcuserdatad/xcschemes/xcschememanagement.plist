@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>EZJson-OSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>EZJson.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>D54E0C9A1D1168DB00081292</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D596A56E1E06DCE4004162A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

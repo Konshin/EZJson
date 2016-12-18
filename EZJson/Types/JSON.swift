@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public enum JSON {
     case object([Swift.String: JSON])
