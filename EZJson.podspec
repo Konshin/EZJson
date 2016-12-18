@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name       		 	 = "EZJson"
-  s.version    			 = "1.0.0"
+  s.version    			 = "1.0.1"
   s.summary     		 = "The simplest JSON parser."
   s.homepage   			 = "https://github.com/Konshin/EZJson"
   s.license    			 = { :type => 'MIT', :file => 'LICENSE' }
